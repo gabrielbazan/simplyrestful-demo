@@ -8,7 +8,7 @@ A country has states, and a state has lakes.
 
 ## The API
 
-So the API has three endpoints:
+So, the API has three endpoints:
  * /countries
  * /states
  * /lakes
@@ -19,7 +19,7 @@ Resources are represented using JSON (JavaScript Object Notation), so when you s
 request body (POST and PUT HTTP methods) to the server, you must send the 
 _Content-type: Application/json_ header.
 
-Lets see how we can do it.
+Let's see how we can do it.
 
 ### Countries
 
@@ -48,7 +48,7 @@ And you'll get a response like this:
 #### List Countries
 
 Using the HTTP GET method over its endpoint, you will retrieve a list of all the existent 
-countries. So you'll get a response like this:
+countries. So, you'll get a response like this:
 
 ```json
 {
@@ -110,7 +110,7 @@ You can't delete a country if there are States that belong to the country you ar
 
 ## Filtering and Pagination
 
-Filtering and pagination can be applyed using URL parameters.
+Filtering and pagination can be applied using URL parameters.
 
 ### Filtering
 
