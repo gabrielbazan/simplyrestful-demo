@@ -118,6 +118,11 @@ Filtering and pagination can be applied using URL parameters.
 
 Using the _limit_ and _offset_ URL parameters you can handle the pagination. Also, list resources provide a _count_ property.
 
+Example:
+```
+{url}/countries?limit=10&offset=20
+```
+
 On the [settings.py](simplyrestful-demo/app/settings.py) you can configure:
  * The default quantity of results per page, using the _DEFAULT_PAGE_SIZE_ setting.
  * And the maximum quantity of results per page, using the _MAX_PAGE_SIZE_ setting.
