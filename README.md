@@ -1,6 +1,6 @@
 # _Lakes_: A _simply-restful_ demo application
 
-Here is a sample application, implemented with the simply-restful framework.
+Here is a sample application, implemented with the [SimplyReSTful](https://github.com/gabrielbazan/simply-restful) framework.
 
 And it is a very simple one. Its business logic is the following: 
 A country has states, and a state has lakes.
