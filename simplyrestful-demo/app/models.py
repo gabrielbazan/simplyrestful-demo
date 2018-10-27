@@ -11,27 +11,27 @@ from simplyrestful.models.geometry import Geometry
 
 
 class Country(Model):
-    __tablename__ = 'country'
+    __tablename__ = 'public.country'
     id = Column(Integer, primary_key=True)
     name = Column(Text, nullable=False, unique=True)
     created = Column(DateTime, default=func.now())
 
 
 class State(Model):
-    __tablename__ = 'state'
+    __tablename__ = 'public.state'
     id = Column(Integer, primary_key=True)
     name = Column(Text, nullable=False, unique=True)
-    country_id = Column(Integer, ForeignKey('country.id'), nullable=False)
+    country_id = Column(Integer, ForeignKey('public.country.id'), nullable=False)
     country = relationship('Country')
 
 
 class Lake(Model):
-    __tablename__ = 'lake'
+    __tablename__ = 'public.lake'
     id = Column(Integer, primary_key=True)
     name = Column(Text, nullable=False, unique=True)
     created = Column(DateTime, default=func.now())
     geom = Column(Geometry('POLYGON', srid=4326))
-    state_id = Column(Integer, ForeignKey('state.id'), nullable=False)
+    state_id = Column(Integer, ForeignKey('public.state.id'), nullable=False)
     state = relationship('State', backref='lakes')
 
 
