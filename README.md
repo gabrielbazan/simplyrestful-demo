@@ -125,7 +125,7 @@ Examples:
 ```
 {url}/countries?id__eq=1
 {url}/countries?id__in=1;2
-{url}/countries?id__gt=3&name__like=%America%&id_notin=6;8;10
+{url}/countries?id__gt=3&name__like=%America%&id__notin=6;8;10
 ```
 
 ### Ordering
@@ -140,7 +140,7 @@ Examples:
 
 {url}/countries?order_by=id__desc
 
-{url}/countries?order_by=name__desc;id_asc
+{url}/countries?order_by=name__desc;id__asc
 ```
 
 ### Pagination
