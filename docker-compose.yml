@@ -1,0 +1,16 @@
+version: '3'
+services:
+  database:
+    image: mdillon/postgis
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: simplyresful
+      POSTGRES_PASSWORD: simplyresful
+      POSTGRES_DB: simplyresful
+  app:
+    build: simplyrestful-demo
+    ports:
+      - "80:80"
