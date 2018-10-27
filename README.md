@@ -110,6 +110,14 @@ You can't delete a country if there are States that belong to the country you ar
 
 ## Filtering and Pagination
 
-Using the URL parameters, you can apply: 
- * Pagination: Using the _limit_ and _offset_ parameters. []
- * Filtering: 
+Filtering and pagination can be applyed using URL parameters.
+
+### Filtering
+
+### Pagination
+
+Using the _limit_ and _offset_ URL parameters you can handle the pagination. Also, list resources provide a _count_ property.
+
+On the [settings.py](simplyrestful-demo/app/settings.py) you can configure:
+ * The default quantity of results per page, using the _DEFAULT_PAGE_SIZE_ setting.
+ * And the maximum quantity of results per page, using the _MAX_PAGE_SIZE_ setting.
