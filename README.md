@@ -108,11 +108,40 @@ _204 HTTP code (No Content)_.
 You can't delete a country if there are States that belong to the country you are trying to delete.
 
 
-## Filtering and Pagination
+## Filtering, Ordering and Pagination
 
 Filtering and pagination can be applied using URL parameters.
 
 ### Filtering
+
+Simply-restful has a very complete and automatic filtering system you can use though URL parameters.
+
+Each parameter applies a filter over an specific resource propery, and is formed as **{property_name}__{operation}={value}**, where:
+ * **property_name** is the name of the resource property (the column, on the database) over which you're applying the filter.
+ * **operation** is one of: "eq", "gt", "ge", "lt", "le", "in", "notin", "like", "notlike", "ilike", "notilike", "is", "isnot", "intersects", "contains". "intersects" and "contains" are geometric operations. 
+ * **value** is ... the value.
+
+Examples:
+```
+{url}/countries?id__eq=1
+{url}/countries?id__in=1;2
+{url}/countries?id__gt=3&name__like=%America%&id_notin=6;8;10
+```
+
+### Ordering
+
+Using the _order_by_ URL parameter you can specify how to order the list resource.
+
+By default ordering is ascending (see the first example), and you can specify multiple columns. Ordering is applied from left to right.
+
+Examples:
+```
+{url}/countries?order_by=id
+
+{url}/countries?order_by=id__desc
+
+{url}/countries?order_by=name__desc;id_asc
+```
 
 ### Pagination
 
