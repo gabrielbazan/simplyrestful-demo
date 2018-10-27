@@ -1,4 +1,4 @@
-# _Lakes_: A _simply-restful_ demo application
+# _Lakes_: A _Simply ReSTful_ demo application
 
 Here is a sample application, implemented with the [SimplyReSTful](https://github.com/gabrielbazan/simply-restful) framework.
 
